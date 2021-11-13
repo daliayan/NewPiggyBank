@@ -60,7 +60,6 @@
     searchTerm(event){
         this.setState({searchTerm: event.target.value})
     }
-
     filterBankOnChange(){ 
         return this.state.bankData.filter(name => name.toLowerCase().includes(this.state.searchTerm.toLowerCase())) 
     }
