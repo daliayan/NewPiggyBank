@@ -4,33 +4,26 @@ class AdderButton extends Component {
     constructor() {
         super();
         this.state = {
-            num1: 0,
-            num2: 0,
+            num1: '',
+            num2: '',
             total: []
         };
-        this.likerIncreasing = this.likerIncreasing.bind(this);
-        this.likerIncreasing2 = this.likerIncreasing2.bind(this)
     }
 
     likerIncreasing(){
-         let newCount = this.state.num1 + 1;
          this.setState({
-            total: newCount,
+            total: parseInt(this.state.num1) + parseInt(this.state.num2),
          });
     };
 
-    likerIncreasing2(){
-        let newCount = this.state.num2 + 2;
-        this.setState({
-           total: newCount,
-        });
-   };
-
     render(){
-        return <div>
-            <div onClick={this.likerIncreasing} className="liker-funct">Likes: {this.state.num1}</div>
-            <div onClick={this.likerIncreasing2} className="liker-funct">Likes: {this.state.num2}</div>
+        return <div className="liker-funct">
+            <input type="text" value={this.state.num1} onChange={(event) => {this.setState({num1: event.target.value})}} placeholder="Enter a Number Here"/>
+            <h3>+</h3>
+            <input type="text" value={this.state.num2} onChange={(event) => {this.setState({num2: event.target.value})}} placeholder="Enter a Number Here"/>
             <h1>{this.state.total}</h1>
+            <button onClick={() => this.likerIncreasing()}>Click To Add</button>
+            {/* <input type="text" value={this.state.total}/> */}
         </div>
     }
 }

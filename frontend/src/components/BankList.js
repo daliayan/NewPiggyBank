@@ -5,7 +5,7 @@ import {fetchBanks} from '../actions/fetchBanks';
 // import AdderButton from '../components/AdderButton'
 // import Counter from '../components/Counter';
 // import PlusMinus from '../components/PlusMinus';
-import GenderFilter from '../components/GenderFilter';
+// import GenderFilter from '../components/GenderFilter';
 
 class BankList extends Component {
 
@@ -46,7 +46,6 @@ class BankList extends Component {
                 DELETE
             </button>
             {/* <LikeButton/> */}
-            {/* <AdderButton /> */}
         </ol>
         </div>)
     }
@@ -61,7 +60,8 @@ class BankList extends Component {
             <div id="bank-container" className="bank-container">
                  {/* <Counter /> */}
                  {/* <PlusMinus /> */}
-                 <GenderFilter />
+                 {/* <GenderFilter /> */}
+                 {/* <AdderButton /> */}
 
                 <h2> ALL PIGGY BANKS</h2>
                 {this.mapBanks()}

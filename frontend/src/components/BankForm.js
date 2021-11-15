@@ -61,7 +61,7 @@ class BankForm extends Component {
                     <br></br>
                     <div className="piggy-bank-form-text">
                         <label>NAME: </label>
-                        <input id="name" type="text" value={this.state.name} onChange={this.handleName} required/>
+                        <input id="name" type="text" value={this.state.name} onChange={this.handleName} placeholder="Add Name Here"required/>
                     </div>
                     <br></br>
                     <div className="piggy-bank-form-dropdown">
