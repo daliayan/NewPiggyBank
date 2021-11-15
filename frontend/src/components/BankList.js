@@ -6,6 +6,7 @@ import {fetchBanks} from '../actions/fetchBanks';
 // import Counter from '../components/Counter';
 // import PlusMinus from '../components/PlusMinus';
 // import GenderFilter from '../components/GenderFilter';
+// import AddToString from './AddToString';
 
 class BankList extends Component {
 
@@ -45,7 +46,6 @@ class BankList extends Component {
             <button onClick={() => {this.deleteBank(bank)}}  key={bank.key} className="delete-button" >
                 DELETE
             </button>
-            {/* <LikeButton/> */}
         </ol>
         </div>)
     }
@@ -58,10 +58,9 @@ class BankList extends Component {
 
         return (
             <div id="bank-container" className="bank-container">
-                 {/* <Counter /> */}
-                 {/* <PlusMinus /> */}
-                 {/* <GenderFilter /> */}
-                 {/* <AdderButton /> */}
+                {/* <AddToString header="Hello World"/> */}
+
+
 
                 <h2> ALL PIGGY BANKS</h2>
                 {this.mapBanks()}

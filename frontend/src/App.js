@@ -26,12 +26,9 @@ class App extends Component {
             <Biography />
           </Route>
           <Route path="/banks" />
-          {/* <Route path="/order">
-            <OrderedBanks />
-          </Route> */}
+          
           <Switch>
             <>
-            {/* <Counter /> */}
               <BankList />
               <BankForm />
             </>
