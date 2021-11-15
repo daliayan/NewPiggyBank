@@ -60,6 +60,7 @@ class BankList extends Component {
         return (
             <div id="bank-container" className="bank-container">
                 {/* <AddToString header="Hello World"/> */}
+                {/* <PlusMinus /> */}
                 <h2> ALL PIGGY BANKS</h2>
                 {this.mapBanks()}
             </div>
