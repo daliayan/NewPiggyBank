@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import {fetchBanks} from '../actions/fetchBanks';
-// import LikeButton from '../components/LikeButton'
+import LikeButton from '../components/LikeButton'
 // import AdderButton from '../components/AdderButton'
 // import Counter from '../components/Counter';
 // import PlusMinus from '../components/PlusMinus';
@@ -42,10 +42,11 @@ class BankList extends Component {
     mapBanks(){
         return this.props.banks.map((bank) => <div className="bank-list-data">
         <ol>
-         {bank.name} is a {bank.gender} 🐖 with ${bank.fund} 💰 
+         {bank.name} is a {bank.gender} 🐖 with ${bank.fund} 💰
             <button onClick={() => {this.deleteBank(bank)}}  key={bank.key} className="delete-button" >
                 DELETE
             </button>
+            <LikeButton />
         </ol>
         </div>)
     }
@@ -59,9 +60,6 @@ class BankList extends Component {
         return (
             <div id="bank-container" className="bank-container">
                 {/* <AddToString header="Hello World"/> */}
-
-
-
                 <h2> ALL PIGGY BANKS</h2>
                 {this.mapBanks()}
             </div>

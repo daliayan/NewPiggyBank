@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+// import heartLiker from '../images/heart.jpg';
 
 class LikeButton extends Component {
     constructor() {
@@ -17,7 +18,9 @@ class LikeButton extends Component {
     };
 
     render(){
-        return <div onClick={this.likerIncreasing} className="liker-funct">Likes: {this.state.likes}</div>
+        return <div className="like-funct" onClick={this.likerIncreasing} className="liker-funct">
+            Likes: {this.state.likes}
+        </div>
     }
 }
 
