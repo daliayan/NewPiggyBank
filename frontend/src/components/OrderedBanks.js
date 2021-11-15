@@ -17,7 +17,7 @@ class OrderedBanks extends Component {
     }
 
     orderedPig(){
-        return this.props.banks.filter(bankMoney => bankMoney.fund >= 456).map((bank) => <div className="bank-list-data">
+        return this.props.banks.filter(bankMoney => bankMoney.fund >= 456).map((bank) => <div className="bank-nav-data">
         <ol>
          {bank.name} is a {bank.gender} 🐖 with ${bank.fund} 💰
         </ol>

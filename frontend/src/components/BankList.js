@@ -5,6 +5,7 @@ import {fetchBanks} from '../actions/fetchBanks';
 // import AdderButton from '../components/AdderButton'
 // import Counter from '../components/Counter';
 // import PlusMinus from '../components/PlusMinus';
+import GenderFilter from '../components/GenderFilter';
 
 class BankList extends Component {
 
@@ -55,13 +56,14 @@ class BankList extends Component {
     }
 
     render(){
+
         return (
             <div id="bank-container" className="bank-container">
                  {/* <Counter /> */}
                  {/* <PlusMinus /> */}
-                <h2>
-                    ALL PIGGY BANKS
-                </h2>
+                 <GenderFilter />
+
+                <h2> ALL PIGGY BANKS</h2>
                 {this.mapBanks()}
             </div>
         )
